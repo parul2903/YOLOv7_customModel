@@ -1,7 +1,7 @@
 # YoloV7_customModel
 YoloV7 applied on custom dataset. The dataset is collected from Google's OpenImages Dataset and data pre-processing and augmentation steps are done using Roboflow.
 
-How to implement YOLOV7 in Google Colab:
+# How to implement YOLOV7 in Google Colab:
 ```bash
 git clone https://github.com/WongKinYiu/yolov7
 ```
@@ -31,3 +31,8 @@ Testing model on custom dataset:
 ```bash
 python test.py --data data/custom.yaml --img 640 --batch 32 --conf 0.001 --iou 0.65 --device 0 --weights yolov7_training.pt --name yolov7_640_val
 ```
+
+# References:
+https://github.com/WongKinYiu/yolov7
+https://storage.googleapis.com/openimages/web/index.html
+https://roboflow.com/
