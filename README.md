@@ -12,7 +12,7 @@ Download training weights:
 ```
 
 Training model on custom dataset:
-!python train.py --workers 8 --device 0 --batch-size 4 --epoch 31 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights 'yolov7_training.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml
+!python train.py --workers 8 --device 0 --batch-size 32 --data data/custom.yaml --img 640 640 --cfg cfg/training/yolov7-custom.yaml --weights 'yolov7_training.pt' --name yolov7-custom --hyp data/hyp.scratch.custom.yaml
 
 
 Performing detections:
@@ -25,4 +25,9 @@ Performing detections:
 2) on Videos
 ```bash
 !python detect.py --weights /content/yolov7/runs/train/yolov7-custom3/weights/best.pt --conf 0.25 --img-size 640 --source /content/traffic.mp4
+```
+
+Testing model on custom dataset:
+```bash
+python test.py --data data/custom.yaml --img 640 --batch 32 --conf 0.001 --iou 0.65 --device 0 --weights yolov7_training.pt --name yolov7_640_val
 ```
