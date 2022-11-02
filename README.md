@@ -34,5 +34,7 @@ python test.py --data data/custom.yaml --img 640 --batch 32 --conf 0.001 --iou 0
 
 # References:
 https://github.com/WongKinYiu/yolov7
+
 https://storage.googleapis.com/openimages/web/index.html
+
 https://roboflow.com/
